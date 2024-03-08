@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Dinámica</title>
+  </head>
+  <body>
+    <label for="opciones">Selecciona una opción:</label>
+    <select id="opciones" onchange="cargarHTML()">
+      <option value="emailVerification">Verificación de email</option>
+      <option value="suscriptionSuccess">Suscripción Exitosa</option>
+      <option value="emailSuscription-Gold">Email: Suscripción GOLD Exitosa</option>
+      <option value="emailSuscription-Gold-Comodato">Email: Suscripción GOLD Comodato Exitosa</option>
+    </select>
+
+    <div id="contenido">
+      <!-- El contenido se cargará aquí -->
+      <script>
+        fetch("emailVerification.html")
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById("contenido").innerHTML = html;
+          })
+          .catch((error) => console.error("Error al cargar el HTML:", error));
+      </script>
+    </div>
+
+    <script>
+      function cargarHTML() {
+        // Obtener el elemento select y su índice seleccionado
+        var select = document.getElementById("opciones");
+        var indiceSeleccionado = select.selectedIndex;
+
+        // Obtener el valor y el nombre de la opción seleccionada
+        var valorSeleccionado = select.options[indiceSeleccionado].value;
+
+        // Construir la ruta del archivo HTML basada en el valor seleccionado
+        var rutaHTML = valorSeleccionado + ".html";
+
+        // Realizar la carga del HTML
+        fetch(rutaHTML)
+          .then((response) => response.text())
+          .then((html) => {
+            document.getElementById("contenido").innerHTML = html;
+          })
+          .catch((error) => console.error("Error al cargar el HTML:", error));
+      }
+    </script>
+  </body>
+</html>
