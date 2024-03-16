@@ -69,6 +69,21 @@
         .dark-mode-images {
           display: none;
         }
+        #hr {
+          border: none;
+          height: 1px;
+          background-color: #0066ff;
+          margin: 20px 0;
+        }
+
+        /* #adulto-mayor {
+          background-color: #6F6F6E;
+          color: #fff;
+          border-radius: 20px;
+          padding-top: 1px;
+          padding-bottom: 20px;
+          width:auto;
+        } */
       }
 
       /* Modo Oscuro */
@@ -110,9 +125,23 @@
           text-decoration: none;
           color: #f5f7f9;
         }
+        #hr {
+          border: none;
+          height: 2px;
+          background-color: #f5f7f9;
+          margin: 20px 55px;
+        }
         .light-mode-images {
           display: none;
         }
+        /* #adulto-mayor {
+          background-color: #9C9B9B;
+          color: #fff;
+          border-radius: 20px;
+          padding-top: 1px;
+          padding-bottom: 15px;
+          width:auto;
+        } */
       }
     </style>
   </head>
@@ -152,20 +181,25 @@
             </li>
           </ol>
 
-          <h2>Si sos quién va a ser cuidado:</h2>
+          <hr id="hr" />
+          <div id="adulto-mayor">
+            <h2>Si sos quién va a ser cuidado:</h2>
 
-          <ol id="list" start="2">
-            <li id="listitem">
-              Iniciá sesión en la App con las siguientes credenciales:
-              <p><b>Email:</b> nombre.apellido@ellie.care</p>
-              <p><b>Contraseña:</b> ELLIE-00000XX</p>
-            </li>
-            <li id="listitem">
-              Tocá en la pestaña de <b>Red</b> y terminá de completar tus datos.
-            </li>
-          </ol>
+            <ol id="list" start="2">
+              <li id="listitem">
+                Iniciá sesión en la App con las siguientes credenciales:
+                <p><b>Email:</b> nombre.apellido@ellie.care</p>
+                <p><b>Contraseña:</b> ELLIE-00000XX</p>
+              </li>
+              <li id="listitem">
+                Tocá en la pestaña de <b>Red</b> y terminá de completar tus
+                datos.
+              </li>
+            </ol>
+          </div>
 
-          <h2>Si sos quién va a cuidar al Adulto Mayor:</h2>
+          <hr id="hr" />
+          <h2>Si sos quién va a cuidar a Nombre Apellido:</h2>
 
           <ol id="list" start="2">
             <li id="listitem">
@@ -199,12 +233,15 @@
             Ya estás dentro de tu Red de Ayuda. Continuá <b>invitando</b> a
             todos los integrantes que vos quieras.
           </p>
-          <p style="color: #0066ff">
-            Recordá que <b>no vas a tener asistencia</b> hasta que no completes
-            <b>todos tus datos</b> y <b>te llegue el reloj</b> listo para usar.
-          </p>
+          <div style="background-color: #D73225; border-radius: 10px; margin-inline: 20px; padding: 10px; padding-inline: 30px;">
+            <p style="color: #f5f7f9">
+              Recordá que <b>no vas a tener asistencia</b> hasta que no
+              completes <b>todos tus datos</b> y <b>te llegue el reloj</b> listo
+              para usar.
+            </p>
+          </div>
           <p>
-            En breve nos vamos a <b>comunicar con vos</b> a 11 3152 4917 para
+            En breve nos vamos a <b>comunicar con vos</b> al (+54) 1131524917 para
             gestionar el <b>envío del reloj</b>.
           </p>
 
