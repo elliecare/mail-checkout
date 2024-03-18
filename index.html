@@ -8,17 +8,17 @@
   <body>
     <label for="opciones">Selecciona una opción:</label>
     <select id="opciones" onchange="cargarHTML()">
-      <option value="emailVerification">Verificación de email</option>
-      <option value="suscriptionSuccess">Suscripción Exitosa</option>
-      <option value="emailSuscription-Gold">Email: Suscripción GOLD Exitosa</option>
-      <option value="emailSuscription-Gold-Comodato">Email: Suscripción GOLD Comodato Exitosa</option>
+      <option value="templates/emailVerification">Verificación de email</option>
+      <option value="templates/subscriptionSuccess">Suscripción Exitosa</option>
+      <option value="templates/emailSubscription-Gold">Email: Suscripción GOLD Exitosa</option>
+      <option value="templates/emailSubscription-Gold-Loan">Email: Suscripción GOLD Comodato Exitosa</option>
     </select>
 
     <div id="contenido">
       <!-- El contenido se cargará aquí -->
       <script>
         // fetch("emailVerification.html")
-        fetch("emailSuscription-Gold.html")
+        fetch("templates/emailSubscription-Gold.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("contenido").innerHTML = html;
