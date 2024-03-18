@@ -37,7 +37,7 @@ const test = {
     customer_phone: '+5411664928'
 }
 // Ejemplo de uso
-getTemplateHTML('subscription_gold_loan', test);
+//getTemplateHTML('subscription_gold_loan', test);
 
 module.exports = {
     getTemplateHTML
