@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 const templates = {
-    subscription_gold:'templates/email_subscription_gold',
-    subscription_gold_loan:'templates/email_subscription_gold_loan',
-    subscription_success:'templates/subscription_success',
-    email_verification:'templates/email_verification'
+    subscription_gold:'./templates/email_subscription_gold',
+    subscription_gold_loan:'./templates/email_subscription_gold_loan',
+    subscription_success:'./templates/subscription_success',
+    email_verification:'./templates/email_verification'
 }
 
 function getTemplateHTML(selected, params) {
@@ -36,7 +36,7 @@ const test = {
     customer_phone: '+5411664928'
 }
 // Ejemplo de uso
-//getTemplateHTML('subscription_gold_loan', test);
+getTemplateHTML('subscription_gold_loan', test);
 
 module.exports = {
     getTemplateHTML
