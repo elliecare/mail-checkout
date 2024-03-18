@@ -1,6 +1,6 @@
 {
-  "name": "mailing-ellie",
-  "version": "1.0.2",
+  "name": "mail-checkout",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
