@@ -12,7 +12,6 @@ function getTemplateHTML(selected, params) {
     const archive = templates[selected];
     const {email, password, code, customer_phone} = params;
 
-    //const filePath = `${archive}.html`;
     const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
