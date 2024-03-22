@@ -69,6 +69,12 @@
         .dark-mode-images {
           display: none;
         }
+        #hr {
+          border: none;
+          height: 1px;
+          background-color: #0066ff;
+          margin: 20px 0;
+        }
       }
 
       /* Modo Oscuro */
@@ -113,6 +119,12 @@
         .light-mode-images {
           display: none;
         }
+        #hr {
+          border: none;
+          height: 2px;
+          background-color: #f5f7f9;
+          margin: 20px 55px;
+        }
       }
     </style>
   </head>
@@ -134,14 +146,10 @@
       <!-- Cuerpo del correo -->
       <tr>
         <td id="mailbody">
-          <p>Si aún no compraste tu reloj, ponete en contacto con nosotros:</p>
-          <a id="link" href="https://ellie.care" target="_blank"
-            ><b>www.ellie.care</b></a
-          >
           <p>
             Solo falta que cargues en la aplicación de tu celular los
-            <b>datos de la persona que va a ser cuidada</b> para que
-            podamos ayudarla de la mejor manera.
+            <b>datos de la persona que va a ser cuidada</b> para que podamos
+            ayudarla de la mejor manera.
           </p>
           <p>Para ello seguí los siguientes pasos:</p>
           <ol id="list">
@@ -156,20 +164,27 @@
             </li>
           </ol>
 
-          <h2>Si sos quién va a ser cuidado:</h2>
+          <hr id="hr" />
+          <div id="adulto-mayor">
+            <h2>Si sos quién va a ser cuidado:</h2>
 
-          <ol id="list" start="2">
-            <li id="listitem">
-              Iniciá sesión en la App con las siguientes credenciales:
-              <p><b>Email:</b> %EMAIL%</p>
-              <p><b>Contraseña:</b> %PASSWORD%</p>
-            </li>
-            <li id="listitem">
-              Tocá en la pestaña de <b>Red</b> y terminá de completar tus datos.
-            </li>
-          </ol>
+            <ol id="list" start="2">
+              <li id="listitem">
+                Iniciá sesión en la App con las siguientes credenciales:
+                <p><b>Email:</b> %EMAIL%</p>
+                <p><b>Contraseña:</b> %PASSWORD%</p>
+              </li>
+              <li id="listitem">
+                Tocá en la pestaña de <b>Red</b> y terminá de completar tus
+                datos.
+              </li>
+            </ol>
+          </div>
 
-          <h2>Si sos quién va a cuidar a: %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%</h2>
+          <hr id="hr" />
+          <h2>
+            Si sos quién va a cuidar a: %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%
+          </h2>
 
           <ol id="list" start="2">
             <li id="listitem">
@@ -185,8 +200,10 @@
           </ol>
           <h1 id="h1blue"><b>%CODE%</b></h1>
           <img
-          src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
-          height="500" alt="Unirse a una red">
+            src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
+            height="500"
+            alt="Unirse a una red"
+          />
 
           <ol
             id="list"
@@ -208,8 +225,8 @@
             <b>todos tus datos</b> y <b>te llegue tu reloj</b> listo para usar.
           </p>
           <p>
-            En breve nos vamos a <b>comunicar con vos</b> a %CUSTOMER_PHONE% para
-            gestionar el <b>envío del reloj</b>.
+            En breve nos vamos a <b>comunicar con vos</b> a %CUSTOMER_PHONE%
+            para gestionar el <b>envío del reloj</b>.
           </p>
 
           <h1 id="h1blue" style="padding-top: 50px">
