@@ -33,16 +33,16 @@ async function getTemplateHTML(selected, params) {
 }
 
 //TEST
-(async () => {
-    const test = {
-        email:'sarasa@sarasa.com',
-        password: 1234156,
-        sn_code: 48955,
-        customer_phone: '+5411664928'
-    };
-    const template = await getTemplateHTML('subscription_gold_loan', test);
-    console.log({template});
-})();
+// (async () => {
+//     const test = {
+//         email:'sarasa@sarasa.com',
+//         password: 1234156,
+//         sn_code: 48955,
+//         customer_phone: '+5411664928'
+//     };
+//     const template = await getTemplateHTML('subscription_gold_loan', test);
+//     console.log({template});
+// })();
 
 module.exports = {
     getTemplateHTML
