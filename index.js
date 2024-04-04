@@ -27,22 +27,22 @@ async function getTemplateHTML(selected, params) {
             modifiedHTML = patient_first_name ? modifiedHTML.replace('%PATIENT_FIRST_NAME%', patient_first_name) : modifiedHTML;
             modifiedHTML = patient_last_name ? modifiedHTML.replace('%PATIENT_LAST_NAME%', patient_last_name) : modifiedHTML;
     
-            resolve(modifiedHTML);
+            resolve(modifiedHTML.toString());
         });
     })
 }
 
 //TEST
-// (async () => {
-//     const test = {
-//         email:'sarasa@sarasa.com',
-//         password: 1234156,
-//         sn_code: 48955,
-//         customer_phone: '+5411664928'
-//     };
-//     const template = await getTemplateHTML('subscription_gold_loan', test);
-//     console.log({template});
-// })();
+(async () => {
+    const test = {
+        email:'sarasa@sarasa.com',
+        password: 1234156,
+        sn_code: 48955,
+        customer_phone: '+5411664928'
+    };
+    const template = await getTemplateHTML('subscription_gold_loan', test);
+    console.log({template});
+})();
 
 module.exports = {
     getTemplateHTML
