@@ -26,7 +26,6 @@ function getTemplateHTML(selected, params) {
         modifiedHTML = patient_first_name ? modifiedHTML.replace('%PATIENT_FIRST_NAME%', patient_first_name) : modifiedHTML;
         modifiedHTML = patient_last_name ? modifiedHTML.replace('%PATIENT_LAST_NAME%', patient_last_name) : modifiedHTML;
 
-        console.log(modifiedHTML)
         return modifiedHTML;
     });
 }
@@ -38,7 +37,7 @@ const test = {
     customer_phone: '+5411664928'
 }
 // Ejemplo de uso
-//getTemplateHTML('subscription_gold_loan', test);
+//console.log(getTemplateHTML('subscription_gold_loan', test));
 
 module.exports = {
     getTemplateHTML
