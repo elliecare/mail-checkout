@@ -8,261 +8,99 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      body {
-        /* font-family: Raleway, sans-serif; */
-        font-family: "Quicksand", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
-      #list {
-        width: 80%;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      #listitem {
-        padding: 5px;
-      }
-
-      /* Modo Claro */
-      @media (prefers-color-scheme: light) {
-        #heading {
-          background-color: #0066ff;
-          color: #f5f7f9;
-          text-align: center;
-          padding: 20px;
-        }
-        #mailbody {
-          background-color: #fff;
-          color: #3c3c3b;
-          padding: 20px;
-          font-size: 16px;
-          text-align: center;
-        }
-        #footer {
-          background-color: #fff;
-          color: #3c3c3b;
-          padding: 20px;
-        }
-        #pblue {
-          color: #0066ff;
-          font-size: 20px;
-          font-weight: bold;
-          margin-top: 0px;
-        }
-        #h1blue {
-          color: #0066ff;
-          font-weight: bold;
-          margin-top: 0px;
-          text-align: center;
-        }
-        #fino {
-          font-weight: normal;
-        }
-        #link {
-          text-decoration: none;
-          color: #3c3c3b;
-        }
-        .dark-mode-images {
-          display: none;
-        }
-        #hr {
-          border: none;
-          height: 1px;
-          background-color: #0066ff;
-          margin: 20px 0;
-        }
-
-        /* #adulto-mayor {
-          background-color: #6F6F6E;
-          color: #fff;
-          border-radius: 20px;
-          padding-top: 1px;
-          padding-bottom: 20px;
-          width:auto;
-        } */
-      }
-
-      /* Modo Oscuro */
-      @media (prefers-color-scheme: dark) {
-        #heading {
-          background-color: #0066ff;
-          color: #f5f7f9;
-          text-align: center;
-          padding: 20px;
-        }
-        #mailbody {
-          background-color: #3c3c3b;
-          padding: 20px;
-          color: #f5f7f9;
-          font-size: 16px;
-          text-align: center;
-        }
-        #footer {
-          background-color: #0066ff;
-          color: #f5f7f9;
-          padding: 20px;
-        }
-        #pblue {
-          color: #f5f7f9;
-          font-size: 20px;
-          font-weight: bold;
-          margin-top: 0px;
-        }
-        #h1blue {
-          color: #f5f7f9;
-          font-weight: bold;
-          margin-top: 0px;
-          text-align: center;
-        }
-        #fino {
-          font-weight: normal;
-        }
-        #link {
-          text-decoration: none;
-          color: #f5f7f9;
-        }
-        .light-mode-images {
-          display: none;
-        }
-        #hr {
-          border: none;
-          height: 2px;
-          background-color: #f5f7f9;
-          margin: 20px 55px;
-        }
-        /* #adulto-mayor {
-          background-color: #9C9B9B;
-          color: #fff;
-          border-radius: 20px;
-          padding-top: 1px;
-          padding-bottom: 15px;
-          width:auto;
-        } */
-      }
-    </style>
   </head>
-  <body style="margin: 0; padding: 0">
+  <body style="margin: 0; padding: 0; font-family: 'Quicksand', sans-serif;">
     <table
       id="table"
       width="100%"
       cellspacing="0"
       cellpadding="0"
-      style="max-width: 700px; margin: 0 auto"
+      style="max-width: 700px; margin: 0 auto;"
     >
       <!-- Encabezado -->
       <tr>
-        <td id="heading">
+        <td id="heading" style="background-color: #0066ff; color: #f5f7f9; text-align: center; padding: 20px;">
           <h1>¡Estás a punto de finalizar tu suscripción!</h1>
         </td>
       </tr>
 
       <!-- Cuerpo del correo -->
       <tr>
-        <td id="mailbody">
+        <td id="mailbody" style="background-color: #fff; color: #3c3c3b; padding: 20px; font-size: 16px; text-align: center;">
           <p>Si aún no compraste tu reloj, ponete en contacto con nosotros:</p>
-          <a id="link" href="https://ellie.care" target="_blank"
-            ><b>www.ellie.care</b></a
-          >
+          <a href="https://ellie.care" target="_blank" style="text-decoration: none; color: #3c3c3b;"><b>www.ellie.care</b></a>
           <p>
             Solo falta que cargues en la aplicación de tu celular los
             <b>datos de la persona que va a ser cuidada</b> para que podamos
             ayudarla de la mejor manera.
           </p>
           <p>Para ello seguí los siguientes pasos:</p>
-          <ol id="list">
-            <li id="listitem">
+          <ol id="list" style="width: 80%; margin: 0 auto; text-align: left;">
+            <li style="padding: 5px;">
               <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-              <a
-                id="link"
-                href="https://checkout.ellie.care/download"
-                target="_blank"
-                ><b>aquí</b></a
-              >.
+              <a href="https://checkout.ellie.care/download" target="_blank" style="text-decoration: none; color: #3c3c3b;"><b>aquí</b></a>.
             </li>
           </ol>
 
-          <hr id="hr" />
-          <div id="adulto-mayor">
+          <hr style="border: none; height: 1px; background-color: #0066ff; margin: 20px 0;" />
+          <div id="adulto-mayor" style="background-color: #6F6F6E; color: #fff; border-radius: 20px; padding-top: 1px; padding-bottom: 20px; width:auto;">
             <h2>Si sos quién va a ser cuidado:</h2>
 
-            <ol id="list" start="2">
-              <li id="listitem">
+            <ol id="list" start="2" style="width: 80%; margin: 0 auto; text-align: left;">
+              <li style="padding: 5px;">
                 Iniciá sesión en la App con las siguientes credenciales:
                 <p><b>Email:</b> %EMAIL%</p>
                 <p><b>Contraseña:</b> %PASSWORD%</p>
               </li>
-              <li id="listitem">
-                Tocá en la pestaña <b>Perfil</b> y terminá de completar tus
-                datos.
+              <li style="padding: 5px;">
+                Tocá en la pestaña <b>Perfil</b> y terminá de completar tus datos.
               </li>
             </ol>
           </div>
 
-          <hr id="hr" />
-          <h2>Si sos quién va a cuidar a: %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%</h2>
+          <hr style="border: none; height: 1px; background-color: #0066ff; margin: 20px 0;" />
+          <h2 style="color: #f5f7f9; background-color: #0066ff; padding: 20px; text-align: center;">Si sos quién va a cuidar a: %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%</h2>
 
-          <ol id="list" start="2">
-            <li id="listitem">
-              Si aún no creaste tu cuenta en Ellie Care, <b>creala</b>. Podes
-              hacerlo con una dirección de email (necesitás acceso a ese correo
-              para validar la cuenta porque te va a llegar <b>otro email</b> con
-              <b>otro código</b>).
+          <ol id="list" start="2" style="width: 80%; margin: 0 auto; text-align: left;">
+            <li style="padding: 5px;">
+              Si aún no creaste tu cuenta en Ellie Care, <b>creala</b>. Podes hacerlo con una dirección de email (necesitás acceso a ese correo para validar la cuenta porque te va a llegar <b>otro email</b> con <b>otro código</b>).
             </li>
-            <li id="listitem">
-              Una vez creada tu cuenta, ingresá a la Red de Ayuda con
-              <b>el siguiente código</b> siguiendo estos pasos:
+            <li style="padding: 5px;">
+              Una vez creada tu cuenta, ingresá a la Red de Ayuda con <b>el siguiente código</b> siguiendo estos pasos:
             </li>
           </ol>
-          <h1 id="h1blue"><b>%CODE%</b></h1>
-          <img
-          src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
-          height="500" alt="Unirse a una red">
+          <h1 style="color: #0066ff; font-weight: bold; margin-top: 0px; text-align: center;"><b>%CODE%</b></h1>
+          <img src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif" height="500" alt="Unirse a una red">
 
-          <ol
-            id="list"
-            start="4"
-            style="padding-bottom: 100px; padding-top: 20px"
-          >
-            <li id="listitem">
-              Tocá en la pestaña <b>Perfil</b> y terminá de completar los datos
-              del Adulto Mayor.
+          <ol id="list" start="4" style="padding-bottom: 100px; padding-top: 20px; width: 80%; margin: 0 auto; text-align: left;">
+            <li style="padding: 5px;">
+              Tocá en la pestaña <b>Perfil</b> y terminá de completar los datos del Adulto Mayor.
             </li>
           </ol>
 
           <p>
-            Ya estás dentro de tu Red de Ayuda. Continuá <b>invitando</b> a
-            todos los integrantes que vos quieras.
+            Ya estás dentro de tu Red de Ayuda. Continuá <b>invitando</b> a todos los integrantes que vos quieras.
           </p>
           <div style="background-color: #D73225; border-radius: 10px; margin-inline: 20px; padding: 10px; padding-inline: 30px;">
-            <p style="color: #f5f7f9">
-              Recordá que <b>no vas a tener asistencia</b> hasta que no
-              completes <b>todos tus datos</b> y <b>te llegue el reloj</b> listo
-              para usar.
+            <p style="color: #f5f7f9;">
+              Recordá que <b>no vas a tener asistencia</b> hasta que no completes <b>todos tus datos</b> y <b>te llegue el reloj</b> listo para usar.
             </p>
           </div>
           <p>
-            En breve nos vamos a <b>comunicar con vos</b> al %CUSTOMER_PHONE% para
-            gestionar el <b>envío del reloj</b>.
+            En breve nos vamos a <b>comunicar con vos</b> al %CUSTOMER_PHONE% para gestionar el <b>envío del reloj</b>.
           </p>
 
-          <h1 id="h1blue" style="padding-top: 50px">
-            Disfrutá tu vida, nosotros te cuidamos
-          </h1>
+          <h1 style="color: #0066ff; font-weight: bold; padding-top: 50px; text-align: center;">Disfrutá tu vida, nosotros te cuidamos</h1>
 
-          <p style="padding-top: 100px">
-            Si no fuiste vos quién se registró en Ellie Care ignorá este
-            mensaje.
+          <p style="padding-top: 100px;">
+            Si no fuiste vos quién se registró en Ellie Care ignorá este mensaje.
           </p>
         </td>
       </tr>
 
       <!-- Footer -->
       <tr>
-        <td id="footer">
+        <td id="footer" style="background-color: #fff; color: #3c3c3b; padding: 20px;">
           <table>
             <tbody>
               <tr>
@@ -271,25 +109,22 @@
                     src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/LogoLightMode.svg"
                     width="100"
                     height="100"
-                    class="light-mode-images"
+                    style="display: none;"
                   />
                   <img
                     src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/LogoDarkMode.svg"
                     width="100"
                     height="100"
-                    class="dark-mode-images"
                   />
                 </th>
 
-                <th scope="col" style="padding-left: 20px">
+                <th scope="col" style="padding-left: 20px;">
                   <table width="450">
                     <tbody>
                       <tr>
                         <th scope="col">
-                          <p id="pblue" width="426" height="80" align="center">
-                            CONEXIÓN CON TU BIENESTAR
-                          </p>
-                          <hr />
+                          <p style="color: #0066ff; font-size: 20px; font-weight: bold; margin-top: 0px; margin-bottom: 0px; text-align: center;">CONEXIÓN CON TU BIENESTAR</p>
+                          <hr style="border: none; height: 2px; background-color: #0066ff; margin: 0 auto; margin-top: 10px; margin-bottom: 10px; width: 50%;" />
                         </th>
                       </tr>
                       <tr>
@@ -302,134 +137,102 @@
                                     src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/phoneLightMode.svg"
                                     height="20"
                                     alt=""
-                                    class="light-mode-images"
-                                    style="vertical-align: middle"
+                                    style="vertical-align: middle; display: none;"
                                   />
                                   <img
                                     src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/phoneDarkMode.svg"
                                     height="20"
                                     alt=""
-                                    class="dark-mode-images"
-                                    style="vertical-align: middle"
+                                    style="vertical-align: middle;"
                                   />
-                                  <span style="vertical-align: middle"
-                                    >0800 888 3554</span
-                                  >
+                                  <span style="vertical-align: middle;">0800 888 3554</span>
                                 </th>
                                 <th id="fino" scope="col" align="left">
-                                  <a
-                                    id="link"
-                                    href="https://ellie.care"
-                                    target="_blank"
-                                  >
+                                  <a href="https://ellie.care" target="_blank" style="text-decoration: none; color: #3c3c3b;">
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/worldLightMode.svg"
                                       height="20"
                                       alt=""
-                                      class="light-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle; display: none;"
                                     />
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/worldDarkMode.svg"
                                       height="20"
                                       alt=""
-                                      class="dark-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle;"
                                     />
-                                    <span style="vertical-align: middle"
-                                      >www.ellie.care</span
-                                    >
+                                    <span style="vertical-align: middle;">www.ellie.care</span>
                                   </a>
                                 </th>
                                 <th scope="col">
-                                  <a
-                                    href="https://www.linkedin.com/company/ellie-care/mycompany/"
-                                    target="_blank"
-                                  >
+                                  <a href="https://www.linkedin.com/company/ellie-care/mycompany/" target="_blank">
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/linkedinLightMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="light-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle; display: none;"
                                     />
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/linkedinDarkMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="dark-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle;"
                                     />
                                   </a>
                                 </th>
                                 <th scope="col">
-                                  <a
-                                    href="https://www.instagram.com/elliecare.latam/"
-                                    target="_blank"
-                                  >
+                                  <a href="https://www.instagram.com/elliecare.latam/" target="_blank">
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/instagramLightMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="light-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle; display: none;"
                                     />
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/instagramDarkMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="dark-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle;"
                                     />
                                   </a>
                                 </th>
                                 <th scope="col">
-                                  <a
-                                    href="https://twitter.com/elliecareok"
-                                    target="_blank"
-                                  >
+                                  <a href="https://twitter.com/elliecareok" target="_blank">
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/twitterLightMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="light-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle; display: none;"
                                     />
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/twitterDarkMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="dark-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle;"
                                     />
                                   </a>
                                 </th>
                                 <th scope="col">
-                                  <a
-                                    href="https://www.facebook.com/Ellie-Care-114087367948463"
-                                    target="_blank"
-                                  >
+                                  <a href="https://www.facebook.com/Ellie-Care-114087367948463" target="_blank">
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/facebookLightMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="light-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle; display: none;"
                                     />
                                     <img
                                       src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/facebookDarkMode.svg"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      class="dark-mode-images"
-                                      style="vertical-align: middle"
+                                      style="vertical-align: middle;"
                                     />
                                   </a>
                                 </th>
