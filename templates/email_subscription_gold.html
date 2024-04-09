@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mail de validación de email</title>
@@ -9,52 +9,52 @@
       rel="stylesheet"
     />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Quicksand', sans-serif;
-        }
-        #heading {
-            background-color: #0066ff;
-            color: #f5f7f9;
-            text-align: center;
-            padding: 20px;
-        }
-        #mailbody {
-            background-color: #fff;
-            color: #3c3c3b;
-            padding: 20px;
-            font-size: 16px;
-            text-align: center;
-        }
-        #footer {
-            background-color: #fff;
-            color: #3c3c3b;
-            padding: 20px;
-        }
-        #pblue {
-            color: #0066ff;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 0px;
-            text-align: center;
-        }
-        #h1blue {
-            color: #0066ff;
-            font-weight: bold;
-            margin-top: 0px;
-            text-align: center;
-        }
-        #fino {
-            font-weight: normal;
-        }
-        #link {
-            text-decoration: none;
-            color: #3c3c3b;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      #heading {
+        background-color: #0066ff;
+        color: #f5f7f9;
+        text-align: center;
+        padding: 20px;
+      }
+      #mailbody {
+        background-color: #fff;
+        color: #3c3c3b;
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+      #footer {
+        background-color: #fff;
+        color: #3c3c3b;
+        padding: 20px;
+      }
+      #pblue {
+        color: #0066ff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 0px;
+        text-align: center;
+      }
+      #h1blue {
+        color: #0066ff;
+        font-weight: bold;
+        margin-top: 0px;
+        text-align: center;
+      }
+      #fino {
+        font-weight: normal;
+      }
+      #link {
+        text-decoration: none;
+        color: #3c3c3b;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <table
       id="table"
       width="100%"
@@ -64,14 +64,31 @@
     >
       <!-- Encabezado -->
       <tr>
-        <td id="heading">
+        <td
+          id="heading"
+          style="
+            background-color: #0066ff;
+            color: #f5f7f9;
+            text-align: center;
+            padding: 20px;
+          "
+        >
           <h1>¡Estás a punto de finalizar tu suscripción!</h1>
         </td>
       </tr>
 
       <!-- Cuerpo del correo -->
       <tr>
-        <td id="mailbody">
+        <td
+          id="mailbody"
+          style="
+            background-color: #fff;
+            color: #3c3c3b;
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+          "
+        >
           <p>Si aún no compraste tu reloj, ponete en contacto con nosotros:</p>
           <a
             href="https://ellie.care"
@@ -153,7 +170,7 @@
               text-align: center;
             "
           >
-            Si sos quién va a cuidar a: %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%
+            Si sos quién va a cuidar a %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%:
           </h2>
 
           <ol
@@ -172,7 +189,16 @@
               <b>el siguiente código</b> siguiendo estos pasos:
             </li>
           </ol>
-          <h1 id="h1blue"><b>%CODE%</b></h1>
+          <h1
+            style="
+              color: #0066ff;
+              font-weight: bold;
+              margin-top: 0px;
+              text-align: center;
+            "
+          >
+            <b>%CODE%</b>
+          </h1>
           <img
             src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
             height="500"
@@ -221,7 +247,16 @@
             para gestionar el <b>envío del reloj</b>.
           </p>
 
-          <h1 id="h1blue">Disfrutá tu vida, nosotros te cuidamos</h1>
+          <h1
+            style="
+              color: #0066ff;
+              font-weight: bold;
+              padding-top: 50px;
+              text-align: center;
+            "
+          >
+            Disfrutá tu vida, nosotros te cuidamos
+          </h1>
 
           <p style="padding-top: 100px">
             Si no fuiste vos quién se registró en Ellie Care ignorá este
@@ -232,26 +267,29 @@
 
       <!-- Footer -->
       <tr>
-        <td id="footer">
+        <td
+          id="footer"
+          style="background-color: #fff; color: #3c3c3b; padding: 20px"
+        >
           <table>
             <tbody>
               <tr>
                 <th scope="col">
                   <img
-                    src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/LogoLightMode.svg"
+                    src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/LogoLightMode.png"
                     width="100"
                     height="100"
                   />
                 </th>
-      
+
                 <th scope="col" style="padding-left: 20px">
                   <table width="450">
                     <tbody>
                       <tr>
                         <th scope="col">
                           <p
-                            id="pblue"
                             style="
+                              color: #0066ff;
                               font-size: 20px;
                               font-weight: bold;
                               margin-top: 0px;
@@ -281,11 +319,11 @@
                               <tr>
                                 <th id="fino" scope="col" align="left">
                                   <img
-                                    src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/phoneLightMode.svg"
+                                    src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/phoneLightMode.png"
                                     height="20"
                                     alt=""
-                                    style="vertical-align: middle; "
-                                  /> 
+                                    style="vertical-align: middle"
+                                  />
                                   <span style="vertical-align: middle"
                                     >0800 888 3554</span
                                   >
@@ -294,13 +332,16 @@
                                   <a
                                     href="https://ellie.care"
                                     target="_blank"
-                                    style="text-decoration: none; color: #3c3c3b"
+                                    style="
+                                      text-decoration: none;
+                                      color: #3c3c3b;
+                                    "
                                   >
                                     <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/worldLightMode.svg"
+                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/worldLightMode.png"
                                       height="20"
                                       alt=""
-                                      style="vertical-align: middle; "
+                                      style="vertical-align: middle"
                                     />
                                     <span style="vertical-align: middle"
                                       >www.ellie.care</span
@@ -313,11 +354,11 @@
                                     target="_blank"
                                   >
                                     <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/linkedinLightMode.svg"
+                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/linkedinLightMode.png"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      style="vertical-align: middle; "
+                                      style="vertical-align: middle"
                                     />
                                   </a>
                                 </th>
@@ -327,11 +368,11 @@
                                     target="_blank"
                                   >
                                     <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/instagramLightMode.svg"
+                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/instagramLightMode.png"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      style="vertical-align: middle; "
+                                      style="vertical-align: middle"
                                     />
                                   </a>
                                 </th>
@@ -341,11 +382,11 @@
                                     target="_blank"
                                   >
                                     <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/twitterLightMode.svg"
+                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/twitterLightMode.png"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      style="vertical-align: middle; "
+                                      style="vertical-align: middle"
                                     />
                                   </a>
                                 </th>
@@ -355,13 +396,12 @@
                                     target="_blank"
                                   >
                                     <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/facebookLightMode.svg"
+                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/facebookLightMode.png"
                                       width="20"
                                       height="20"
                                       alt=""
-                                      style="vertical-align: middle; "
+                                      style="vertical-align: middle"
                                     />
-                  
                                   </a>
                                 </th>
                               </tr>
@@ -377,7 +417,6 @@
           </table>
         </td>
       </tr>
-      
     </table>
   </body>
 </html>
