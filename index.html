@@ -17,8 +17,8 @@
     <div id="contenido">
       <!-- El contenido se cargará aquí -->
       <script>
-        // fetch("emailVerification.html")
-        fetch("templates/email_subscription_gold.html")
+        fetch("templates/email_verification.html")
+        // fetch("templates/email_subscription_gold.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("contenido").innerHTML = html;
