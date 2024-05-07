@@ -38,7 +38,7 @@
             padding: 20px;
           "
         >
-          <h1>¡Estás a punto de finalizar tu suscripción!</h1>
+          <h1>¡Alerta Pendiente!</h1>
         </td>
       </tr>
 
@@ -54,30 +54,14 @@
             text-align: center;
           "
         >
-          <!-- <p>Si aún no compraste tu reloj, ponete en contacto con nosotros:</p>
-          <a
-            href="https://ellie.care"
-            target="_blank"
-            style="text-decoration: none; color: #3c3c3b"
-            ><b>www.ellie.care</b></a
-          >
-          <p> -->
-            Solo falta que cargues en la aplicación de tu celular los
-            <b>datos de la persona que va a ser cuidada</b> para que podamos
-            ayudarla de la mejor manera.
+          <p>
+            Solicitamos al <b>Call Center de turno</b> al momento de recibir
+            esta notificación, que atienda el alerta con los siguientes datos
+            creando el Caso de forma manual
+            <br />
+            (usando la opción "<b>+ Caso de Connect</b>") en el perfil del
+            cliente:
           </p>
-          <p>Para ello seguí los siguientes pasos:</p>
-          <!-- <ol id="list" style="width: 80%; margin: 0 auto; text-align: left">
-            <li style="padding: 5px">
-              <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-              <a
-                href="https://checkout.ellie.care/download"
-                target="_blank"
-                style="text-decoration: none; color: #3c3c3b"
-                ><b>aquí</b></a
-              >.
-            </li>
-          </ol> -->
 
           <hr
             style="
@@ -97,7 +81,7 @@
                 text-align: center;
               "
             >
-              Si sos quién va a ser cuidado:
+              %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%
             </h2>
 
             <ol
@@ -105,25 +89,12 @@
               start="1"
               style="width: 80%; margin: 0 auto; text-align: left"
             >
+              <li style="padding: 5px"><b>Fecha:</b> %DATE%</li>
+              <li style="padding: 5px"><b>Tipo de Alerta:</b> %ALERT_TYPE%</li>
+              <li style="padding: 5px"><b>N° de SmartWatch:</b> %SW_NUMBER%</li>
+              <li style="padding: 5px"><b>N° de Celular:</b> %CEL_NUMBER%</li>
               <li style="padding: 5px">
-                <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-                <a
-                  href="https://checkout.ellie.care/download"
-                  target="_blank"
-                  style="text-decoration: none; color: #3c3c3b"
-                  ><b>aquí</b></a
-                >.
-              </li>
-              <li style="padding: 5px">
-                Iniciá sesión en la App con las siguientes credenciales:
-                <p><b>Email:</b> %EMAIL%</p>
-                <p><b>Contraseña:</b> %PASSWORD%</p>
-              </li>
-              <li style="padding: 5px">
-                Tocá en la pestaña <b>Perfil</b> y terminá de completar tus
-                datos. <br /><br />
-                Es importante que tus datos estén actualizados para poder
-                brindarte la mejor asistencia posible.
+                <b>N° de Tel. Fijo:</b> %PHONE_NUMBER%
               </li>
             </ol>
           </div>
@@ -144,7 +115,7 @@
               text-align: center;
             "
           >
-            Si sos quién va a cuidar a %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%:
+            Red de Ayuda
           </h2>
 
           <ol
@@ -153,102 +124,21 @@
             style="width: 80%; margin: 0 auto; text-align: left"
           >
             <li style="padding: 5px">
-              <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-              <a
-                href="https://checkout.ellie.care/download"
-                target="_blank"
-                style="text-decoration: none; color: #3c3c3b"
-                ><b>aquí</b></a
-              >.
+              <b>Acompañante Principal:</b> %ACP_NAME% - %ACP_PHONE%
             </li>
             <li style="padding: 5px">
-              Si aún no tenés un usuario registrado de Ellie Care, seleccioná
-              <b>Crear cuenta</b> y generalo con un email. Allí te llegará un <b>Código
-              de Verificación de Email</b> que tendrás que colocarlo en la
-              aplicación apenas te registres.
-              <!-- Si aún no creaste tu cuenta en Ellie Care, <b>creala</b>. Podés
-              hacerlo con una dirección de email (necesitás acceso a ese correo
-              para validar la cuenta porque te va a llegar <b>otro email</b> con
-              <b>otro código</b>). -->
+              <b>Acompañante 1:</b> %AC1_NAME% - %AC1_PHONE%
             </li>
             <li style="padding: 5px">
-              Una vez creada y verificada tu cuenta, ingresá a la Red de Ayuda con
-              <b>el siguiente código</b> siguiendo estos pasos:
+              <b>Acompañante 2:</b> %AC2_NAME% - %AC2_PHONE%
+            </li>
+            <li style="padding: 5px">
+              <b>Acompañante 3:</b> %AC3_NAME% - %AC3_PHONE%
+            </li>
+            <li style="padding: 5px">
+              <b>Acompañante 4:</b> %AC4_NAME% - %AC4_PHONE%
             </li>
           </ol>
-          <h1
-            style="
-              color: #0066ff;
-              font-weight: bold;
-              margin-top: 0px;
-              text-align: center;
-            "
-          >
-            <b>%CODE%</b>
-          </h1>
-          <img
-            src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
-            height="500"
-            alt="Unirse a una red"
-          />
-
-          <ol
-            id="list"
-            start="4"
-            style="
-              padding-bottom: 100px;
-              padding-top: 20px;
-              width: 80%;
-              margin: 0 auto;
-              text-align: left;
-            "
-          >
-            <li style="padding: 5px">
-              Si el Adulto Mayor ya inició sesión y aún no completó sus datos,
-              tocá en la pestaña <b>Red</b> > <b>Adulto Mayor</b> y vos como
-              administrador ayudalo a terminar de completar sus datos.
-            </li>
-          </ol>
-
-          <p>
-            Ya estás dentro de tu Red de Ayuda. Continuá <b>invitando</b> a
-            todos los integrantes que vos quieras.
-          </p>
-          <div
-            style="
-              background-color: #d73225;
-              border-radius: 10px;
-              margin-inline: 20px;
-              padding: 10px;
-              padding-inline: 30px;
-            "
-          >
-            <p style="color: #f5f7f9">
-              Recordá que <b>no vas a tener asistencia</b> hasta que no
-              completes <b>todos tus datos</b> y <b>te llegue el reloj</b> listo
-              para usar.
-            </p>
-          </div>
-          <p>
-            En breve nos vamos a <b>comunicar con vos</b> al %CUSTOMER_PHONE%
-            para gestionar el <b>envío del reloj</b>.
-          </p>
-
-          <h1
-            style="
-              color: #0066ff;
-              font-weight: bold;
-              padding-top: 50px;
-              text-align: center;
-            "
-          >
-            Disfrutá tu vida, nosotros te cuidamos
-          </h1>
-
-          <p style="padding-top: 100px">
-            Si no fuiste vos quién se registró en Ellie Care ignorá este
-            mensaje.
-          </p>
         </td>
       </tr>
 
