@@ -12,13 +12,14 @@
       <option value="templates/email_subscription_basic">Email: Suscripción BASIC Exitosa</option>
       <option value="templates/email_subscription_gold">Email: Suscripción GOLD Exitosa</option>
       <option value="templates/email_subscription_gold_loan">Email: Suscripción GOLD Comodato Exitosa</option>
+      <option value="templates/alert_not_in_connect">Alerta Pendiente: No pasó a Connect</option>
     </select>
 
     <div id="contenido">
       <!-- El contenido se cargará aquí -->
       <script>
-        fetch("templates/email_verification.html")
-        // fetch("templates/email_subscription_gold.html")
+        // fetch("templates/email_verification.html")
+        fetch("templates/alert_not_in_connect.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("contenido").innerHTML = html;
