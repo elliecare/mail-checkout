@@ -6,7 +6,8 @@ const templates = {
     subscription_gold_loan:'email_subscription_gold_loan',
     subscription_basic:'email_subscription_basic',
     email_verification:'email_verification',
-    mail_to_logistics:'mail_to_logistics'
+    mail_to_logistics:'mail_to_logistics',
+    alert_pending:'alert_not_in_connect'
 }
 
 async function getTemplateHTML(selected, params) {
