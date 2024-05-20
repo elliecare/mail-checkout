@@ -10,11 +10,11 @@ const templates = {
     alert_pending:'alert_not_in_connect'
 }
 
-async function getTemplateHTML(selected, params) {
+async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {email, password, code, customer_phone, patient_first_name, patient_last_name} = params;
-    
+        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city} = params;
+
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
         fs.readFile(filePath, 'utf8', (err, data) => {
@@ -28,6 +28,14 @@ async function getTemplateHTML(selected, params) {
             modifiedHTML = customer_phone ? modifiedHTML.replace('%CUSTOMER_PHONE%', customer_phone) : modifiedHTML;
             modifiedHTML = patient_first_name ? modifiedHTML.replace('%PATIENT_FIRST_NAME%', patient_first_name) : modifiedHTML;
             modifiedHTML = patient_last_name ? modifiedHTML.replace('%PATIENT_LAST_NAME%', patient_last_name) : modifiedHTML;
+
+            if(isMailToLogistic){
+                modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
+                modifiedHTML = customer_email ? modifiedHTML.replace('%BUYER_EMAIL%', customer_email) : modifiedHTML;
+                modifiedHTML = customer_phone ? modifiedHTML.replace('%BUYER_PHONE%', customer_phone) : modifiedHTML;
+                modifiedHTML = shipping_address ? modifiedHTML.replace('%SHIPPING_ADDRESS%', shipping_address) : modifiedHTML;
+                modifiedHTML = shipping_city ? modifiedHTML.replace('%SHIPPING_CITY%', shipping_city) : modifiedHTML;
+            }
     
             resolve(modifiedHTML.toString());
         });
@@ -40,9 +48,14 @@ async function getTemplateHTML(selected, params) {
 //         email:'sarasa@sarasa.com',
 //         password: 1234156,
 //         sn_code: 48955,
-//         customer_phone: '+5411664928'
+//         customer_phone: '+5411664928',
+//         //Datos para probar mail_to_logistics
+//         customer_name: 'Mostro Test',
+//         customer_email: 'email@compra.com',
+//         shipping_address: 'San Lorenzo 1435',
+//         shipping_city: 'Obera, Misiones.'
 //     };
-//     const template = await getTemplateHTML('subscription_gold_loan', test);
+//     const template = await getTemplateHTML('subscription_gold', test);
 //     console.log({template});
 // })();
 
