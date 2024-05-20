@@ -29,13 +29,15 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = patient_first_name ? modifiedHTML.replace('%PATIENT_FIRST_NAME%', patient_first_name) : modifiedHTML;
             modifiedHTML = patient_last_name ? modifiedHTML.replace('%PATIENT_LAST_NAME%', patient_last_name) : modifiedHTML;
 
-            if(isMailToLogistic){
-                modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
-                modifiedHTML = customer_email ? modifiedHTML.replace('%BUYER_EMAIL%', customer_email) : modifiedHTML;
-                modifiedHTML = customer_phone ? modifiedHTML.replace('%BUYER_PHONE%', customer_phone) : modifiedHTML;
-                modifiedHTML = shipping_address ? modifiedHTML.replace('%SHIPPING_ADDRESS%', shipping_address) : modifiedHTML;
-                modifiedHTML = shipping_city ? modifiedHTML.replace('%SHIPPING_CITY%', shipping_city) : modifiedHTML;
-            }
+            //Variables para el template mail_to_logistics
+            modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
+            modifiedHTML = customer_email ? modifiedHTML.replace('%BUYER_EMAIL%', customer_email) : modifiedHTML;
+            modifiedHTML = customer_phone ? modifiedHTML.replace('%BUYER_PHONE%', customer_phone) : modifiedHTML;
+            modifiedHTML = shipping_address ? modifiedHTML.replace('%SHIPPING_ADDRESS%', shipping_address) : modifiedHTML;
+            modifiedHTML = shipping_city ? modifiedHTML.replace('%SHIPPING_CITY%', shipping_city) : modifiedHTML;
+            modifiedHTML = email ? modifiedHTML.replace('%PATIENT_EMAIL%', email) : modifiedHTML;
+            modifiedHTML = password ? modifiedHTML.replace('%PATIENT_PASSWORD%', password) : modifiedHTML;
+            modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;    
     
             resolve(modifiedHTML.toString());
         });
