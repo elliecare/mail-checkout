@@ -1,6 +1,6 @@
 {
   "name": "mail-checkout",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "Mailing Ellie-care",
   "main": "index.js",
   "scripts": {

@@ -13,7 +13,7 @@ const templates = {
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city} = params;
+        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor} = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
@@ -38,6 +38,7 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = email ? modifiedHTML.replace('%PATIENT_EMAIL%', email) : modifiedHTML;
             modifiedHTML = password ? modifiedHTML.replace('%PATIENT_PASSWORD%', password) : modifiedHTML;
             modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;    
+            modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML;    
     
             resolve(modifiedHTML.toString());
         });
