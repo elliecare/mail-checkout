@@ -7,13 +7,14 @@ const templates = {
     subscription_basic:'email_subscription_basic',
     email_verification:'email_verification',
     mail_to_logistics:'mail_to_logistics',
-    alert_pending:'alert_not_in_connect'
+    alert_pending:'alert_not_in_connect',
+    new_companion_add:'new_companion_add'
 }
 
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor} = params;
+        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name} = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
@@ -38,7 +39,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = email ? modifiedHTML.replace('%PATIENT_EMAIL%', email) : modifiedHTML;
             modifiedHTML = password ? modifiedHTML.replace('%PATIENT_PASSWORD%', password) : modifiedHTML;
             modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;    
-            modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML;    
+            modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML; 
+            modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;   
     
             resolve(modifiedHTML.toString());
         });
