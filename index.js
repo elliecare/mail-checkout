@@ -14,7 +14,7 @@ const templates = {
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name} = params;
+        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name, company_client, type_alert, user_id, id_smartwatch, sw_number, location, event_date} = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
@@ -29,6 +29,13 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = customer_phone ? modifiedHTML.replace('%CUSTOMER_PHONE%', customer_phone) : modifiedHTML;
             modifiedHTML = patient_first_name ? modifiedHTML.replace('%PATIENT_FIRST_NAME%', patient_first_name) : modifiedHTML;
             modifiedHTML = patient_last_name ? modifiedHTML.replace('%PATIENT_LAST_NAME%', patient_last_name) : modifiedHTML;
+            modifiedHTML = company_client ? modifiedHTML.replace('%CC%', company_client) : modifiedHTML;
+            modifiedHTML = type_alert ? modifiedHTML.replace('%ALERT_TYPE%', type_alert) : modifiedHTML;
+            modifiedHTML = user_id ? modifiedHTML.replace('%USER_ID%', user_id) : modifiedHTML;
+            modifiedHTML = id_smartwatch ? modifiedHTML.replace('%SW_ID%', id_smartwatch) : modifiedHTML;
+            modifiedHTML = sw_number ? modifiedHTML.replace('%SW_NUMBER%', sw_number) : modifiedHTML;
+            modifiedHTML = location ? modifiedHTML.replace('%LOCATION%', location) : modifiedHTML;
+            modifiedHTML = event_date ? modifiedHTML.replace('%DATE%', event_date) : modifiedHTML;
 
             //Variables para el template mail_to_logistics
             modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
@@ -41,7 +48,7 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;    
             modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML; 
             modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;   
-    
+
             resolve(modifiedHTML.toString());
         });
     })
