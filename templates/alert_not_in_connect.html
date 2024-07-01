@@ -1,171 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mail de validación de email</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* Estilos CSS */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Quicksand", sans-serif; /* Aplicación de la fuente importada */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mail de validación de email</title>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+          rel="stylesheet"
+  />
+  <style>
+    /* Estilos CSS */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Quicksand", sans-serif; /* Aplicación de la fuente importada */
+    }
 
-      /* Estilos adicionales... */
-    </style>
-  </head>
-  <body>
-    <table
-      id="table"
-      width="100%"
-      cellspacing="0"
-      cellpadding="0"
-      style="max-width: 700px; margin: 0 auto"
-    >
-      <!-- Encabezado -->
-      <tr>
-        <td
-          id="heading"
-          style="
+    /* Estilos adicionales... */
+  </style>
+</head>
+<body>
+<table
+        id="table"
+        width="100%"
+        cellspacing="0"
+        cellpadding="0"
+        style="max-width: 700px; margin: 0 auto"
+>
+  <!-- Encabezado -->
+  <tr>
+    <td
+            id="heading"
+            style="
             background-color: #0066ff;
             color: #f5f7f9;
             text-align: center;
             padding: 20px;
           "
-        >
-          <h1>¡Alerta Pendiente!</h1>
-        </td>
-      </tr>
+    >
+      <h1>¡Alerta Pendiente!</h1>
+    </td>
+  </tr>
 
-      <!-- Cuerpo del correo -->
-      <tr>
-        <td
-          id="mailbody"
-          style="
+  <!-- Cuerpo del correo -->
+  <tr>
+    <td
+            id="mailbody"
+            style="
             background-color: #fff;
             color: #3c3c3b;
             padding: 20px;
             font-size: 16px;
             text-align: center;
           "
-        >
-          <p>
-            Solicitamos al <b>Call Center de turno</b> al momento de recibir
-            esta notificación, que atienda el alerta con los siguientes datos
-            creando el Caso de forma manual
-            <br />
-            (usando la opción "<b>+ Caso de Connect</b>") en el perfil del
-            cliente:
-          </p>
+    >
+      <p>
+        Detectamos un alerta pendiente por parte de <b>%CC%</b>. Sugerimos atender el caso de forma manual.
+      </p>
 
-          <hr
-            style="
+      <hr
+              style="
               border: none;
               height: 1px;
               background-color: #0066ff;
               margin: 20px 0;
             "
-          />
+      />
 
-          <div id="adulto-mayor" style="padding-bottom: 20px; width: auto">
-            <h2
-              style="
+      <div id="adulto-mayor" style="padding-bottom: 20px; width: auto">
+        <h2
+                style="
                 color: #f5f7f9;
                 background-color: #427e46;
                 padding: 20px;
                 text-align: center;
               "
-            >
-              %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%
-            </h2>
+        >
+          %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%
+        </h2>
 
-            <ol
-              id="list"
-              start="1"
-              style="width: 80%; margin: 0 auto; text-align: left"
-            >
-              <li style="padding: 5px"><b>Fecha:</b> %DATE%</li>
-              <li style="padding: 5px"><b>Tipo de Alerta:</b> %ALERT_TYPE%</li>
-              <li style="padding: 5px"><b>N° de SmartWatch:</b> %SW_NUMBER%</li>
-              <li style="padding: 5px"><b>N° de Celular:</b> %CEL_NUMBER%</li>
-              <li style="padding: 5px">
-                <b>N° de Tel. Fijo:</b> %PHONE_NUMBER%
-              </li>
-            </ol>
-          </div>
+        <ol
+                id="list"
+                start="1"
+                style="width: 80%; margin: 0 auto; text-align: left"
+        >
+          <li style="padding: 5px"><b>Tipo de Alerta:</b> %ALERT_TYPE%</li>
+          <li style="padding: 5px"><b>UserID:</b> %USER_ID%</li>
+          <li style="padding: 5px"><b>IMEI Watch:</b> %SW_ID%</li>
+          <li style="padding: 5px"><b>N° de SmartWatch:</b> %SW_NUMBER%</li>
+          <li style="padding: 5px"><b>Ubicación del evento:</b> %LOCATION%</li>
+          <li style="padding: 5px"><b>Fecha del evento:</b> %DATE%</li>
+        </ol>
+      </div>
 
-          <hr
-            style="
+      <hr
+              style="
               border: none;
               height: 1px;
               background-color: #0066ff;
               margin: 20px 0;
             "
-          />
-          <h2
+      />
+    </td>
+  </tr>
+
+  <!-- Mensaje adicional -->
+  <tr>
+    <td
+            id="additional-info"
             style="
-              color: #f5f7f9;
-              background-color: #427e46;
-              padding: 20px;
-              text-align: center;
-            "
-          >
-            Red de Ayuda
-          </h2>
+            background-color: #fff;
+            color: #3c3c3b;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+          "
+    >
+      <p>
+        Para más información ingresá a nuestro <a href="https://backoffice.elliecenter.com" target="_blank">Back Office</a>, Portal de redes, buscar por UserID y Ver más Info.
+        <br />
+        Por cualquier consulta mandanos un email a <a href="mailto:soporte@ellie.care">soporte@ellie.care</a>.
+      </p>
+    </td>
+  </tr>
 
-          <ol
-            id="list"
-            start="1"
-            style="width: 80%; margin: 0 auto; text-align: left"
-          >
-            <li style="padding: 5px">
-              <b>Acompañante Principal:</b> %ACP_NAME% - %ACP_PHONE%
-            </li>
-            <li style="padding: 5px">
-              <b>Acompañante 1:</b> %AC1_NAME% - %AC1_PHONE%
-            </li>
-            <li style="padding: 5px">
-              <b>Acompañante 2:</b> %AC2_NAME% - %AC2_PHONE%
-            </li>
-            <li style="padding: 5px">
-              <b>Acompañante 3:</b> %AC3_NAME% - %AC3_PHONE%
-            </li>
-            <li style="padding: 5px">
-              <b>Acompañante 4:</b> %AC4_NAME% - %AC4_PHONE%
-            </li>
-          </ol>
-        </td>
-      </tr>
-
-      <!-- Footer -->
-      <tr>
-        <td
-          id="footer"
-          style="background-color: #fff; color: #3c3c3b; padding: 20px"
-        >
-          <table>
-            <tbody>
-              <tr>
-                <th scope="col">
-                  <img
+  <!-- Footer -->
+  <tr>
+    <td
+            id="footer"
+            style="background-color: #fff; color: #3c3c3b; padding: 20px"
+    >
+      <table>
+        <tbody>
+        <tr>
+          <th scope="col">
+            <img
                     src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/LogoLightMode.png"
                     width="100"
                     height="100"
-                  />
-                </th>
+            />
+          </th>
 
-                <th scope="col" style="padding-left: 20px">
-                  <table width="450">
-                    <tbody>
-                      <tr>
-                        <th scope="col">
-                          <p
-                            style="
+          <th scope="col" style="padding-left: 20px">
+            <table width="450">
+              <tbody>
+              <tr>
+                <th scope="col">
+                  <p
+                          style="
                               color: #0066ff;
                               font-size: 20px;
                               font-weight: bold;
@@ -173,11 +156,11 @@
                               margin-bottom: 0px;
                               text-align: center;
                             "
-                          >
-                            CONEXIÓN CON TU BIENESTAR
-                          </p>
-                          <hr
-                            style="
+                  >
+                    CONEXIÓN CON TU BIENESTAR
+                  </p>
+                  <hr
+                          style="
                               border: none;
                               height: 2px;
                               background-color: #0066ff;
@@ -186,114 +169,114 @@
                               margin-bottom: 10px;
                               width: 100%;
                             "
-                          />
-                        </th>
-                      </tr>
-                      <tr>
-                        <td>
-                          <table width="450">
-                            <tbody>
-                              <tr>
-                                <th id="fino" scope="col" align="left">
-                                  <img
-                                    src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/phoneLightMode.png"
-                                    height="20"
-                                    alt=""
-                                    style="vertical-align: middle"
-                                  />
-                                  <span style="vertical-align: middle"
-                                    >0800 888 3554</span
-                                  >
-                                </th>
-                                <th id="fino" scope="col" align="left">
-                                  <a
-                                    href="https://ellie.care"
-                                    target="_blank"
-                                    style="
+                  />
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <table width="450">
+                    <tbody>
+                    <tr>
+                      <th id="fino" scope="col" align="left">
+                        <img
+                                src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/phoneLightMode.png"
+                                height="20"
+                                alt=""
+                                style="vertical-align: middle"
+                        />
+                        <span style="vertical-align: middle"
+                        >0800 888 3554</span
+                        >
+                      </th>
+                      <th id="fino" scope="col" align="left">
+                        <a
+                                href="https://ellie.care"
+                                target="_blank"
+                                style="
                                       text-decoration: none;
                                       color: #3c3c3b;
                                     "
-                                  >
-                                    <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/worldLightMode.png"
-                                      height="20"
-                                      alt=""
-                                      style="vertical-align: middle"
-                                    />
-                                    <span style="vertical-align: middle"
-                                      >www.ellie.care</span
-                                    >
-                                  </a>
-                                </th>
-                                <th scope="col">
-                                  <a
-                                    href="https://www.linkedin.com/company/ellie-care/mycompany/"
-                                    target="_blank"
-                                  >
-                                    <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/linkedinLightMode.png"
-                                      width="20"
-                                      height="20"
-                                      alt=""
-                                      style="vertical-align: middle"
-                                    />
-                                  </a>
-                                </th>
-                                <th scope="col">
-                                  <a
-                                    href="https://www.instagram.com/elliecare.latam/"
-                                    target="_blank"
-                                  >
-                                    <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/instagramLightMode.png"
-                                      width="20"
-                                      height="20"
-                                      alt=""
-                                      style="vertical-align: middle"
-                                    />
-                                  </a>
-                                </th>
-                                <th scope="col">
-                                  <a
-                                    href="https://twitter.com/elliecareok"
-                                    target="_blank"
-                                  >
-                                    <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/twitterLightMode.png"
-                                      width="20"
-                                      height="20"
-                                      alt=""
-                                      style="vertical-align: middle"
-                                    />
-                                  </a>
-                                </th>
-                                <th scope="col">
-                                  <a
-                                    href="https://www.facebook.com/Ellie-Care-114087367948463"
-                                    target="_blank"
-                                  >
-                                    <img
-                                      src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/facebookLightMode.png"
-                                      width="20"
-                                      height="20"
-                                      alt=""
-                                      style="vertical-align: middle"
-                                    />
-                                  </a>
-                                </th>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
+                        >
+                          <img
+                                  src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/worldLightMode.png"
+                                  height="20"
+                                  alt=""
+                                  style="vertical-align: middle"
+                          />
+                          <span style="vertical-align: middle"
+                          >www.ellie.care</span
+                          >
+                        </a>
+                      </th>
+                      <th scope="col">
+                        <a
+                                href="https://www.linkedin.com/company/ellie-care/mycompany/"
+                                target="_blank"
+                        >
+                          <img
+                                  src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/linkedinLightMode.png"
+                                  width="20"
+                                  height="20"
+                                  alt=""
+                                  style="vertical-align: middle"
+                          />
+                        </a>
+                      </th>
+                      <th scope="col">
+                        <a
+                                href="https://www.instagram.com/elliecare.latam/"
+                                target="_blank"
+                        >
+                          <img
+                                  src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/instagramLightMode.png"
+                                  width="20"
+                                  height="20"
+                                  alt=""
+                                  style="vertical-align: middle"
+                          />
+                        </a>
+                      </th>
+                      <th scope="col">
+                        <a
+                                href="https://twitter.com/elliecareok"
+                                target="_blank"
+                        >
+                          <img
+                                  src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/twitterLightMode.png"
+                                  width="20"
+                                  height="20"
+                                  alt=""
+                                  style="vertical-align: middle"
+                          />
+                        </a>
+                      </th>
+                      <th scope="col">
+                        <a
+                                href="https://www.facebook.com/Ellie-Care-114087367948463"
+                                target="_blank"
+                        >
+                          <img
+                                  src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/pngs/facebookLightMode.png"
+                                  width="20"
+                                  height="20"
+                                  alt=""
+                                  style="vertical-align: middle"
+                          />
+                        </a>
+                      </th>
+                    </tr>
                     </tbody>
                   </table>
-                </th>
+                </td>
               </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+              </tbody>
+            </table>
+          </th>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
 </html>
