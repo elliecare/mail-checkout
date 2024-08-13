@@ -14,7 +14,7 @@ const templates = {
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name, company_client, type_alert, user_id, id_smartwatch, sw_number, location, event_date, success_url} = params;
+        const {plan_type, plan_name, email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name, company_client, type_alert, user_id, id_smartwatch, sw_number, location, event_date, success_url} = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
@@ -40,6 +40,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
 
             //Variables para el template mail_to_logistics
             modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
+            modifiedHTML = customer_name ? modifiedHTML.replace('%RED_PLAN_TYPE%', plan_type) : modifiedHTML;
+            modifiedHTML = customer_name ? modifiedHTML.replace('%RED_PLAN_NAME%', plan_name) : modifiedHTML;
             modifiedHTML = customer_email ? modifiedHTML.replace('%BUYER_EMAIL%', customer_email) : modifiedHTML;
             modifiedHTML = customer_phone ? modifiedHTML.replace('%BUYER_PHONE%', customer_phone) : modifiedHTML;
             modifiedHTML = shipping_address ? modifiedHTML.replace('%SHIPPING_ADDRESS%', shipping_address) : modifiedHTML;
