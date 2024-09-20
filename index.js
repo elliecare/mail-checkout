@@ -8,7 +8,8 @@ const templates = {
     email_verification:'email_verification',
     mail_to_logistics:'mail_to_logistics',
     alert_pending:'alert_not_in_connect',
-    new_companion_add:'new_companion_add'
+    new_companion_add:'new_companion_add',
+    existing_companion_add:'existing_companion_add'
 }
 
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
