@@ -23,7 +23,10 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             if (err) {
                 reject({error:`Error al leer el archivo ${filePath}: ${err.message}`});
             }
-    
+            if (!data) {
+                reject({ error: `El archivo ${filePath} está vacío o no se pudo leer correctamente.` });
+                return;
+            }
             let modifiedHTML = email ? data.replace('%EMAIL%', email) : data;
             modifiedHTML = password ? modifiedHTML.replace('%PASSWORD%', password) : modifiedHTML;
             modifiedHTML = code ? modifiedHTML.replace('%CODE%', code) : modifiedHTML;
