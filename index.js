@@ -15,7 +15,34 @@ const templates = {
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
     return new Promise((resolve, reject) => {
         const archive = templates[selected];
-        const {plan_type, plan_name, email, password, code, customer_phone, patient_first_name, patient_last_name, customer_name, customer_email, shipping_address, shipping_city, vendor, support_network_name, company_client, type_alert, user_id, id_smartwatch, sw_number, location, event_date, success_url} = params;
+        const {
+					plan_type, 
+					plan_name, 
+					email, 
+					password, 
+					code, 
+					customer_phone, 
+					patient_first_name, 
+					patient_last_name, 
+					customer_name, 
+					customer_email, 
+					shipping_address, 
+					shipping_city, 
+					vendor, 
+					support_network_name, 
+					company_client, 
+					type_alert, 
+					user_id, 
+					id_smartwatch, 
+					sw_number, 
+					location, 
+					event_date, 
+					success_url, 
+					main_companion_first_name, 
+					main_companion_last_name, 
+					main_companion_email, 
+					main_companion_password
+				} = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
     
@@ -52,7 +79,11 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = shipping_city ? modifiedHTML.replace('%SHIPPING_CITY%', shipping_city) : modifiedHTML;
             modifiedHTML = email ? modifiedHTML.replace('%PATIENT_EMAIL%', email) : modifiedHTML;
             modifiedHTML = password ? modifiedHTML.replace('%PATIENT_PASSWORD%', password) : modifiedHTML;
-            modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;    
+            modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;
+						modifiedHTML = main_companion_first_name ? modifiedHTML.replace('%ACP_NAME%', main_companion_first_name) : modifiedHTML;
+						modifiedHTML = main_companion_last_name ? modifiedHTML.replace('%ACP_LASTNAME%', main_companion_last_name) : modifiedHTML;
+						modifiedHTML = main_companion_email ? modifiedHTML.replace('%ACP_EMAIL%', main_companion_email) : modifiedHTML; 
+						modifiedHTML = main_companion_password ? modifiedHTML.replace('%ACP_PASSWORD%', main_companion_password) : modifiedHTML;  
             modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML; 
             modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;   
 
