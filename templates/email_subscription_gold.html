@@ -73,7 +73,7 @@
             padding: 20px;
           "
         >
-          <h1>¡Estás a punto de finalizar tu suscripción!</h1>
+          <h1>¡Ya finalizaste tu suscripción!</h1>
         </td>
       </tr>
 
@@ -91,39 +91,52 @@
         >
           <p>Si aún no compraste tu reloj, podés hacerlo ahora:</p>
           <a
-            href= %SUCCESS_URL%
+            href="%SUCCESS_URL%"
             target="_blank"
             style="text-decoration: none; color: #0066ff"
             ><b>Comprá tu SmartWatch</b></a
           >
           <p>
-            Solo falta que cargues en la aplicación de tu celular los
+            Solo falta que cargues en la Red de Ayuda los
             <b>datos de la persona que va a ser cuidada</b> para que podamos
             ayudarla de la mejor manera.
           </p>
           <p>Para ello seguí los siguientes pasos:</p>
-          <!-- <ol id="list" style="width: 80%; margin: 0 auto; text-align: left">
-            <li style="padding: 5px">
-              <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-              <a
-                href="https://checkout.ellie.care/download"
-                target="_blank"
-                style="text-decoration: none; color: #3c3c3b"
-                ><b>aquí</b></a
-              >.
-            </li>
-          </ol> -->
-
-          <hr
-            style="
-              border: none;
-              height: 1px;
-              background-color: #0066ff;
-              margin: 20px 0;
-            "
-          />
 
           <div id="adulto-mayor" style="padding-bottom: 20px; width: auto">
+            <ol
+              id="list"
+              start="1"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Ingresá a nuestro <b>Portal Web</b> desde tu computadora,
+                celular o tablet desde
+                <a
+                  href="https://backoffice.elliecenter.com/login"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><b>https://backoffice.elliecenter.com/login</b></a
+                >
+                o haciendo click
+                <a
+                  href="https://backoffice.elliecenter.com/login"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><b>aquí</b></a
+                >.
+              </li>
+            </ol>
+
+            <hr
+              style="
+                border: none;
+                height: 1px;
+                background-color: #0066ff;
+                margin: 20px 0;
+              "
+            />
+
             <h2
               style="
                 color: #f5f7f9;
@@ -132,118 +145,77 @@
                 text-align: center;
               "
             >
-              Si sos quién va a ser cuidado:
+              Si sos quién va a ser cuidado:<br />
+              (%PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%)
             </h2>
 
             <ol
               id="list"
-              start="1"
+              start="2"
               style="width: 80%; margin: 0 auto; text-align: left"
             >
               <li style="padding: 5px">
-                <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
+                Iniciá sesión con las siguientes credenciales:
+                <p><b>Email:</b> %EMAIL%</p>
+                <p><b>Contraseña:</b> %PASSWORD%</p>
+              </li>
+            </ol>
+
+            <h2
+              style="
+                color: #f5f7f9;
+                background-color: #427e46;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              Si sos el Administrador de la Red:<br />
+              (%ACP_NAME% %ACP_LASTNAME%)
+            </h2>
+
+            <ol
+              id="list"
+              start="2"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Iniciá sesión con las siguientes credenciales:
+                <p><b>Email:</b> %ACP_EMAIL%</p>
+                <p><b>Contraseña:</b> %ACP_PASSWORD%</p>
+              </li>
+            </ol>
+
+            <hr
+              style="
+                border: none;
+                height: 1px;
+                background-color: #0066ff;
+                margin: 10px 0px 30px;
+              "
+            />
+
+            <ol
+              id="list"
+              start="3"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Tocá en la tarjeta <b>Mis Redes</b> y terminá de completar tus
+                datos personales. <br /><br />
+                También podés hacerlo desde nuestra aplicación para celulares
+                descargándola desde
                 <a
                   href="https://checkout.ellie.care/download"
                   target="_blank"
                   style="text-decoration: none; color: #3c3c3b"
                   ><b>aquí</b></a
-                >.
-              </li>
-              <li style="padding: 5px">
-                Iniciá sesión en la App con las siguientes credenciales:
-                <p><b>Email:</b> %EMAIL%</p>
-                <p><b>Contraseña:</b> %PASSWORD%</p>
-              </li>
-              <li style="padding: 5px">
-                Tocá en la pestaña <b>Perfil</b> y terminá de completar tus
-                datos. <br /><br />
+                >, y completando tu información desde la pestaña <b>Perfil</b>.
+                <br /><br />
                 Es importante que tus datos estén actualizados para poder
                 brindarte la mejor asistencia posible.
               </li>
             </ol>
           </div>
-
-          <hr
-            style="
-              border: none;
-              height: 1px;
-              background-color: #0066ff;
-              margin: 20px 0;
-            "
-          />
-          <h2
-            style="
-              color: #f5f7f9;
-              background-color: #427e46;
-              padding: 20px;
-              text-align: center;
-            "
-          >
-            Si sos quién va a cuidar a %PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%:
-          </h2>
-
-          <ol
-            id="list"
-            start="1"
-            style="width: 80%; margin: 0 auto; text-align: left"
-          >
-            <li style="padding: 5px">
-              <b>Descargá</b> la aplicación en tu celular. Podés hacerlo desde
-              <a
-                href="https://checkout.ellie.care/download"
-                target="_blank"
-                style="text-decoration: none; color: #3c3c3b"
-                ><b>aquí</b></a
-              >.
-            </li>
-            <li style="padding: 5px">
-              Si aún no tenés un usuario registrado de Ellie Care, seleccioná
-              <b>Crear cuenta</b> y generalo con un email. Allí te llegará un <b>Código
-              de Verificación de Email</b> que tendrás que colocarlo en la
-              aplicación apenas te registres.
-              <!-- Si aún no creaste tu cuenta en Ellie Care, <b>creala</b>. Podés
-              hacerlo con una dirección de email (necesitás acceso a ese correo
-              para validar la cuenta porque te va a llegar <b>otro email</b> con
-              <b>otro código</b>). -->
-            </li>
-            <li style="padding: 5px">
-              Una vez creada y verificada tu cuenta, ingresá a la Red de Ayuda con
-              <b>el siguiente código</b> siguiendo estos pasos:
-            </li>
-          </ol>
-          <h1
-            style="
-              color: #0066ff;
-              font-weight: bold;
-              margin-top: 0px;
-              text-align: center;
-            "
-          >
-            <b>%CODE%</b>
-          </h1>
-          <img
-            src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Unirse-a-una-Red-iPhone.gif"
-            height="500"
-            alt="Unirse a una red"
-          />
-
-          <ol
-            id="list"
-            start="4"
-            style="
-              padding-bottom: 100px;
-              padding-top: 20px;
-              width: 80%;
-              margin: 0 auto;
-              text-align: left;
-            "
-          >
-            <li style="padding: 5px">
-              Si el Adulto Mayor ya inició sesión y aún no completó sus datos,
-              tocá en la pestaña <b>Red</b> > <b>Adulto Mayor</b> y vos como
-              administrador ayudalo a terminar de completar sus datos.
-            </li>
-          </ol>
 
           <p>
             Ya estás dentro de tu Red de Ayuda. Continuá <b>invitando</b> a
