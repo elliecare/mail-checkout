@@ -71,8 +71,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
 
             //Variables para el template mail_to_logistics
             modifiedHTML = customer_name ? modifiedHTML.replace('%BUYER_NAME%', customer_name) : modifiedHTML;
-            modifiedHTML = customer_name ? modifiedHTML.replace('%RED_PLAN_TYPE%', plan_type) : modifiedHTML;
-            modifiedHTML = customer_name ? modifiedHTML.replace('%RED_PLAN_NAME%', plan_name) : modifiedHTML;
+            modifiedHTML = plan_type ? modifiedHTML.replace('%RED_PLAN_TYPE%', plan_type) : modifiedHTML;
+            modifiedHTML = plan_name ? modifiedHTML.replace('%RED_PLAN_NAME%', plan_name) : modifiedHTML;
             modifiedHTML = customer_email ? modifiedHTML.replace('%BUYER_EMAIL%', customer_email) : modifiedHTML;
             modifiedHTML = customer_phone ? modifiedHTML.replace('%BUYER_PHONE%', customer_phone) : modifiedHTML;
             modifiedHTML = shipping_address ? modifiedHTML.replace('%SHIPPING_ADDRESS%', shipping_address) : modifiedHTML;
@@ -80,12 +80,12 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = email ? modifiedHTML.replace('%PATIENT_EMAIL%', email) : modifiedHTML;
             modifiedHTML = password ? modifiedHTML.replace('%PATIENT_PASSWORD%', password) : modifiedHTML;
             modifiedHTML = code ? modifiedHTML.replace('%ACP_CODE%', code) : modifiedHTML;
-						modifiedHTML = main_companion_first_name ? modifiedHTML.replace('%ACP_NAME%', main_companion_first_name) : modifiedHTML;
-						modifiedHTML = main_companion_last_name ? modifiedHTML.replace('%ACP_LASTNAME%', main_companion_last_name) : modifiedHTML;
-						modifiedHTML = main_companion_email ? modifiedHTML.replace('%ACP_EMAIL%', main_companion_email) : modifiedHTML; 
-						modifiedHTML = main_companion_password ? modifiedHTML.replace('%ACP_PASSWORD%', main_companion_password) : modifiedHTML;  
-            modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML; 
-            modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;   
+            modifiedHTML = main_companion_first_name ? modifiedHTML.replace('%ACP_NAME%', main_companion_first_name) : modifiedHTML;
+			modifiedHTML = main_companion_last_name ? modifiedHTML.replace('%ACP_LASTNAME%', main_companion_last_name) : modifiedHTML;
+			modifiedHTML = main_companion_email ? modifiedHTML.replace('%ACP_EMAIL%', main_companion_email) : modifiedHTML; 
+			modifiedHTML = main_companion_password ? modifiedHTML.replace('%ACP_PASSWORD%', main_companion_password) : modifiedHTML;  
+            modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML;
+            modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;
 
             resolve(modifiedHTML.toString());
         });
@@ -103,9 +103,23 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
 //         customer_name: 'Mostro Test',
 //         customer_email: 'email@compra.com',
 //         shipping_address: 'San Lorenzo 1435',
-//         shipping_city: 'Obera, Misiones.'
+//         shipping_city: 'Obera, Misiones.',
+// 	    patient_first_name: 'Nombre AM',
+// 	    patient_last_name: 'Apellido AM',
+// 	    email: 'ELLIE-0000023@ellie.care',
+// 	    password: 'Ellie-00023',
+// 	    main_companion_first_name: 'Nombre ACP',
+// 	    main_companion_last_name: 'Apellido ACP',
+// 	    main_companion_email: 'Email ACP',
+// 	    main_companion_password: 'Password ACP',
+// 	    vendor: 'NombreVendor',
+// 	    //@TODO aca agrego el plan
+// 		plan_type: 'Gold',
+// 		plan_name: 'Ellie Gold Comodato',
+// 		company_client: 'Ellie Care CC',
+//         support_network_name: 'Nombre de RED'
 //     };
-//     const template = await getTemplateHTML('subscription_gold', test);
+//     const template = await getTemplateHTML('new_companion_add', test);
 //     console.log({template});
 // })();
 
