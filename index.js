@@ -42,7 +42,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             main_companion_first_name, 
             main_companion_last_name, 
             main_companion_email, 
-            main_companion_password
+            main_companion_password,
+            password_recovery_url
         } = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
@@ -87,6 +88,7 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
 			modifiedHTML = main_companion_password ? modifiedHTML.replace('%ACP_PASSWORD%', main_companion_password) : modifiedHTML;  
             modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML;
             modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;
+            modifiedHTML = password_recovery_url ? modifiedHTML.replace('%PASSWORD_RECOVERY_URL%', String(password_recovery_url)) : modifiedHTML;
 
             resolve(modifiedHTML.toString());
         });
