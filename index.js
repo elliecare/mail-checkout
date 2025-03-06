@@ -35,7 +35,9 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             type_alert, 
             user_id, 
             id_smartwatch, 
-            sw_number, 
+            sw_number,
+            patient_phone_number,
+            patient_phone_number_landline,
             location, 
             event_date, 
             success_url, 
@@ -67,6 +69,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = user_id ? modifiedHTML.replace('%USER_ID%', user_id) : modifiedHTML;
             modifiedHTML = id_smartwatch ? modifiedHTML.replace('%SW_ID%', id_smartwatch) : modifiedHTML;
             modifiedHTML = sw_number ? modifiedHTML.replace('%SW_NUMBER%', sw_number) : modifiedHTML;
+            modifiedHTML = patient_phone_number ? modifiedHTML.replace('%PATIENT_PHONE_NUMBER%', patient_phone_number) : modifiedHTML;
+            modifiedHTML = patient_phone_number_landline ? modifiedHTML.replace('%PATIENT_PHONE_NUMBER_LANDLINE%', patient_phone_number_landline) : modifiedHTML;
             modifiedHTML = location ? modifiedHTML.replace('%LOCATION%', location) : modifiedHTML;
             modifiedHTML = event_date ? modifiedHTML.replace('%DATE%', event_date) : modifiedHTML;
             modifiedHTML = success_url ? modifiedHTML.replace('%SUCCESS_URL%', String(success_url)) : modifiedHTML;
