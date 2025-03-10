@@ -10,7 +10,8 @@ const templates = {
     alert_pending:'alert_not_in_connect',
     new_companion_add:'new_companion_add',
     existing_companion_add:'existing_companion_add',
-    password_recovery:'password_recovery'
+    password_recovery:'password_recovery',
+    sw_out_of_date:'sw_out_of_date'
 }
 
 async function getTemplateHTML(selected, params, isMailToLogistic = false) {
@@ -45,7 +46,9 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             main_companion_last_name, 
             main_companion_email, 
             main_companion_password,
-            password_recovery_url
+            password_recovery_url,
+            backend_date,
+            sw_date
         } = params;
 
         const filePath = path.resolve(__dirname, 'templates', `${archive}.html`);
@@ -93,6 +96,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = vendor ? modifiedHTML.replace('%VENDOR%', vendor) : modifiedHTML;
             modifiedHTML = support_network_name ? modifiedHTML.replace('%SUPPORT_NETWORK_NAME%', support_network_name) : modifiedHTML;
             modifiedHTML = password_recovery_url ? modifiedHTML.replace('%PASSWORD_RECOVERY_URL%', String(password_recovery_url)) : modifiedHTML;
+            modifiedHTML = backend_date ? modifiedHTML.replace('%BACKEND_DATE%', String(backend_date)) : modifiedHTML;
+            modifiedHTML = sw_date ? modifiedHTML.replace('%SW_DATE%', String(sw_date)) : modifiedHTML;
 
             resolve(modifiedHTML.toString());
         });
