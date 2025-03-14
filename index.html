@@ -17,13 +17,14 @@
       <option value="templates/new_companion_add">Email: Nuevo acompañante añadido</option>
       <option value="templates/existing_companion_add">Email: Acompañante existente añadido</option>
       <option value="templates/password_recovery">Email: Recuperación de contraseña</option>
+      <option value="templates/sw_out_of_date">Email: SmartWatch desfasado de horario</option>
     </select>
 
     <div id="contenido">
       <!-- El contenido se cargará aquí -->
       <script>
         // fetch("templates/email_verification.html")
-        fetch("templates/new_companion_add.html")
+        fetch("templates/sw_out_of_date.html")
           .then((response) => response.text())
           .then((html) => {
             document.getElementById("contenido").innerHTML = html;
