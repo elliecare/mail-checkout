@@ -39,7 +39,8 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             sw_number,
             patient_phone_number,
             patient_phone_number_landline,
-            location, 
+            location,
+            location_timestamp, 
             event_date, 
             success_url, 
             main_companion_first_name, 
@@ -75,6 +76,7 @@ async function getTemplateHTML(selected, params, isMailToLogistic = false) {
             modifiedHTML = patient_phone_number ? modifiedHTML.replace('%PATIENT_PHONE_NUMBER%', patient_phone_number) : modifiedHTML;
             modifiedHTML = patient_phone_number_landline ? modifiedHTML.replace('%PATIENT_PHONE_NUMBER_LANDLINE%', patient_phone_number_landline) : modifiedHTML;
             modifiedHTML = location ? modifiedHTML.replace('%LOCATION%', location) : modifiedHTML;
+            modifiedHTML = location_timestamp ? modifiedHTML.replace('%LOCATION_TIMESTAMP%', location_timestamp) : modifiedHTML;
             modifiedHTML = event_date ? modifiedHTML.replace('%DATE%', event_date) : modifiedHTML;
             modifiedHTML = success_url ? modifiedHTML.replace('%SUCCESS_URL%', String(success_url)) : modifiedHTML;
 
