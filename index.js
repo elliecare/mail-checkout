@@ -11,7 +11,8 @@ const templates = {
     new_companion_add: 'new_companion_add',
     existing_companion_add: 'existing_companion_add',
     password_recovery: 'password_recovery',
-    sw_out_of_date: 'sw_out_of_date'
+    sw_out_of_date: 'sw_out_of_date',
+    request_new_health_system:'request_new_health_system'
 };
 
 function replacePlaceholders(template, replacements) {
@@ -24,7 +25,7 @@ function replacePlaceholders(template, replacements) {
     }, template);
 }
 
-async function getTemplateHTML(selected, params = {}, isMailToLogistic = false) {
+async function getTemplateHTML(selected, params = {}) {
     const archive = templates[selected];
     if (!archive) {
         throw new Error(`Template "${selected}" no existe en el mapeo.`);
@@ -79,7 +80,8 @@ async function getTemplateHTML(selected, params = {}, isMailToLogistic = false) 
         CC: params.company_client,
         PATIENT_EMAIL: params.email,
         PATIENT_PASSWORD: params.password,
-        ACP_CODE: params.code
+        ACP_CODE: params.code,
+        HEALTH_SYSTEM_NAME: params.health_system_name
     };
 
     return replacePlaceholders(data, placeholders);
