@@ -86,6 +86,8 @@ async function getTemplateHTML(selected, params = {}) {
         FOOTER: params.footer ?? footerDefault
     };
 
+    console.log('Placeholders:', placeholders);
+    
     return replacePlaceholders(data, placeholders);
 }
 

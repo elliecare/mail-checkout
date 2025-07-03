@@ -1,4 +1,4 @@
-export const footerDefault = `
+const footerDefault = `
   <tr>
     <td
             id="footer"
@@ -151,3 +151,5 @@ export const footerDefault = `
     </td>
   </tr>
 `;
+
+module.exports = { footerDefault };
