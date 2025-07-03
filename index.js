@@ -85,8 +85,6 @@ async function getTemplateHTML(selected, params = {}) {
         HEALTH_SYSTEM_NAME: params.health_system_name,
         FOOTER: params.footer ?? footerDefault
     };
-
-    console.log('Placeholders:', placeholders);
     
     return replacePlaceholders(data, placeholders);
 }
