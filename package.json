@@ -1,6 +1,6 @@
 {
   "name": "mailing-ellie",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Mailing Ellie-care",
   "main": "index.js",
   "scripts": {
