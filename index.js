@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const { footerDefault } = require('./default/footer');
 
 const templates = {
     subscription_gold: 'email_subscription_gold',
@@ -81,9 +82,11 @@ async function getTemplateHTML(selected, params = {}) {
         PATIENT_EMAIL: params.email,
         PATIENT_PASSWORD: params.password,
         ACP_CODE: params.code,
-        HEALTH_SYSTEM_NAME: params.health_system_name
+        HEALTH_SYSTEM_NAME: params.health_system_name,
+        CC_NAME: params.cc_name ?? 'Ellie Care',
+        FOOTER: params.footer ?? footerDefault
     };
-
+    
     return replacePlaceholders(data, placeholders);
 }
 
