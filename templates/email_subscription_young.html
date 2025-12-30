@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mail de validación de email</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      a {
+        cursor: pointer;
+      }
+      #heading {
+        background-color: #0066ff;
+        color: #f5f7f9;
+        text-align: center;
+        padding: 20px;
+      }
+      #mailbody {
+        background-color: #fff;
+        color: #3c3c3b;
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+      }
+      #footer {
+        background-color: #fff;
+        color: #3c3c3b;
+        padding: 20px;
+      }
+      #pblue {
+        color: #0066ff;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 0px;
+        text-align: center;
+      }
+      #h1blue {
+        color: #0066ff;
+        font-weight: bold;
+        margin-top: 0px;
+        text-align: center;
+      }
+      #fino {
+        font-weight: normal;
+      }
+      #link {
+        text-decoration: none;
+        color: #3c3c3b;
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      id="table"
+      width="100%"
+      cellspacing="0"
+      cellpadding="0"
+      style="max-width: 700px; margin: 0 auto"
+    >
+      <!-- Encabezado -->
+      <tr>
+        <td
+          id="heading"
+          style="
+            background-color: #0066ff;
+            color: #f5f7f9;
+            text-align: center;
+            padding: 20px;
+          "
+        >
+          <h1>¡Ya finalizaste tu suscripción!</h1>
+        </td>
+      </tr>
+
+      <!-- Cuerpo del correo -->
+      <tr>
+        <td
+          id="mailbody"
+          style="
+            background-color: #fff;
+            color: #3c3c3b;
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+          "
+        >
+          <p>Si aún no compraste tu reloj, podés hacerlo ahora:</p>
+          <a
+            href="https://mpago.la/27FpWqD"
+            target="_blank"
+            style="text-decoration: none; color: #0066ff; cursor: pointer;"
+            ><b>Comprá tu SmartWatch</b></a
+          >
+          <p>
+            Solo falta que cargues en la Red de Contactos los
+            <b>datos de la persona que va a usar el EllieWatch</b> para que podamos
+            ayudarla de la mejor manera.
+          </p>
+          <p>Para ello seguí los siguientes pasos:</p>
+
+          <div id="adulto-mayor" style="padding-bottom: 20px; width: auto">
+            <ol
+              id="list"
+              start="1"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Ingresá a nuestro <b>Portal Web</b> desde tu computadora,
+                celular o tablet desde
+                <a
+                  href="https://backoffice.elliecenter.com/login"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><b>https://backoffice.elliecenter.com/login</b></a
+                >
+                o haciendo click
+                <a
+                  href="https://backoffice.elliecenter.com/login"
+                  target="_blank"
+                  style="text-decoration: none; color: #3c3c3b"
+                  ><b>aquí</b></a
+                >.
+              </li>
+            </ol>
+
+            <hr
+              style="
+                border: none;
+                height: 1px;
+                background-color: #0066ff;
+                margin: 20px 0;
+              "
+            />
+
+            <h2
+              style="
+                color: #f5f7f9;
+                background-color: #427e46;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              Si sos quién va a usar el EllieWatch:<br />
+              (%PATIENT_FIRST_NAME% %PATIENT_LAST_NAME%)
+            </h2>
+
+            <ol
+              id="list"
+              start="2"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Iniciá sesión con las siguientes credenciales:
+                <p><b>Email:</b> %EMAIL%</p>
+                <p><b>Contraseña:</b> %PASSWORD%</p>
+              </li>
+            </ol>
+
+            <h2
+              style="
+                color: #f5f7f9;
+                background-color: #427e46;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              Si sos el Administrador de la Red:<br />
+              (%ACP_NAME% %ACP_LASTNAME%)
+            </h2>
+
+            <ol
+              id="list"
+              start="2"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Iniciá sesión con las siguientes credenciales:
+                <p><b>Email:</b> %ACP_EMAIL%</p>
+                <p><b>Contraseña:</b> %ACP_PASSWORD%</p>
+              </li>
+            </ol>
+
+            <hr
+              style="
+                border: none;
+                height: 1px;
+                background-color: #0066ff;
+                margin: 10px 0px 30px;
+              "
+            />
+
+            <ol
+              id="list"
+              start="3"
+              style="width: 80%; margin: 0 auto; text-align: left"
+            >
+              <li style="padding: 5px">
+                Tocá en la tarjeta <b>Mis Redes</b> y terminá de completar los
+                datos personales de la Red.
+                <br />
+              </li>
+            </ol>
+          </div>
+
+          <hr
+            style="
+              border: none;
+              height: 1px;
+              background-color: #0066ff;
+              margin: 10px 0px 30px;
+            "
+          />
+
+          <div>
+            <div
+              style="
+                background-color: #427e46;
+                border-radius: 10px;
+                /* margin-inline: 20px; */
+                padding: 10px;
+                padding-inline: 30px;
+              "
+            >
+              <p style="color: #f5f7f9">
+                Es importante que <b>los datos estén actualizados</b> para poder
+                brindarles la mejor asistencia posible.
+              </p>
+            </div>
+            <br />
+            <img
+              src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Modificar+info+del+AM+desde+BO.gif"
+              width="max-width"
+              style="clip-path: inset(0 4.1% 0.5% 4.1%); position: relative"
+              alt="Actualización de datos del AM"
+            />
+          </div>
+
+          <br />
+          <div>
+            <div
+              style="
+                background-color: #427e46;
+                border-radius: 10px;
+                /* margin-inline: 20px; */
+                padding: 10px;
+                padding-inline: 30px;
+              "
+            >
+              <p style="color: #f5f7f9">
+                También podés gestionar la Red de Contactos, ya sea
+                <b>modificando tus datos</b>, <b>agregando nuevos miembros</b>,
+                <b>delegando el rol de administrador</b> de la Red, o
+                <b>modificar el orden de prioridades</b>
+                de contacto.
+              </p>
+            </div>
+            <br />
+            <img
+              src="https://elliecare-public-images.s3.sa-east-1.amazonaws.com/mailing-images/Modificar+Red+desde+BO.gif"
+              width="max-width"
+              style="clip-path: inset(0 4.1% 0.5% 4.1%); position: relative"
+              alt="Actualización de datos del AM"
+            />
+          </div>
+
+          <br/><br/>
+          <div
+            style="
+              background-color: #d73225;
+              border-radius: 10px;
+              margin-inline: 20px;
+              padding: 10px;
+              padding-inline: 30px;
+            "
+          >
+            <p style="color: #f5f7f9">
+              Recordá que <b>no vas a tener asistencia</b> hasta que no
+              completes <b>todos tus datos</b> y <b>te llegue el reloj</b> listo
+              para usar.
+            </p>
+          </div>
+          <p>
+            En breve nos vamos a <b>comunicar con vos</b> al %CUSTOMER_PHONE%
+            para gestionar el <b>envío del reloj</b>.
+          </p>
+
+          <h1
+            style="
+              color: #0066ff;
+              font-weight: bold;
+              padding-top: 50px;
+              text-align: center;
+            "
+          >
+            Disfrutá tu vida, nosotros te cuidamos
+          </h1>
+
+          <p style="padding-top: 100px">
+            Si no fuiste vos quién se registró en %CC_NAME% ignorá este
+            mensaje.
+          </p>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      %FOOTER%
+    </table>
+  </body>
+</html>
