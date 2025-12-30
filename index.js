@@ -5,6 +5,8 @@ const { footerDefault } = require('./default/footer');
 const templates = {
     subscription_gold: 'email_subscription_gold',
     subscription_gold_loan: 'email_subscription_gold_loan',
+    subscription_young: 'email_subscription_young',
+    subscription_young_loan: 'email_subscription_young_loan',
     subscription_basic: 'email_subscription_basic',
     email_verification: 'email_verification',
     mail_to_logistics: 'mail_to_logistics',
